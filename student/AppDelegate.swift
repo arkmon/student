@@ -13,11 +13,11 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var appCoordinator: AppCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        setUpCoordinator()
         return true
     }
 
@@ -46,7 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setUpCoordinator() {
-        
+        appCoordinator = AppCoordinator(with: self)
+        appCoordinator?.start()
     }
 
     // MARK: - Core Data stack
@@ -94,5 +95,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+}
+
+extension AppDelegate: CoordinatorDelegate {
+    
+    func present(_ viewController: UIViewController) {
+        window?.rootViewController = viewController
+    }
 }
 

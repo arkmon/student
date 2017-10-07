@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5560A3881F898F5E00AA0B78 /* StudentSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560A3861F898F5E00AA0B78 /* StudentSignUpViewController.swift */; };
+		5560A3891F898F5E00AA0B78 /* StudentSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5560A3871F898F5E00AA0B78 /* StudentSignUpViewController.xib */; };
+		5560A38C1F898FAA00AA0B78 /* StudentSignUpCoordinatror.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560A38B1F898FAA00AA0B78 /* StudentSignUpCoordinatror.swift */; };
+		5582BDE71F89314A00E2D994 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582BDE61F89314A00E2D994 /* AppCoordinator.swift */; };
+		5582BDE91F89350B00E2D994 /* StartScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582BDE81F89350B00E2D994 /* StartScreenCoordinator.swift */; };
+		5582BDEB1F897ABF00E2D994 /* StartScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5582BDEA1F897ABF00E2D994 /* StartScreenViewController.xib */; };
 		55C1F14A1F8930050064CB36 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1F1481F8930050064CB36 /* Coordinator.swift */; };
 		55C1F14B1F8930050064CB36 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1F1491F8930050064CB36 /* CoordinatorDelegate.swift */; };
 		F3ED2FE41F87886F00A247B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED2FE31F87886F00A247B6 /* AppDelegate.swift */; };
 		F3ED2FE61F87886F00A247B6 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED2FE51F87886F00A247B6 /* StartScreenViewController.swift */; };
-		F3ED2FE91F87886F00A247B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3ED2FE71F87886F00A247B6 /* Main.storyboard */; };
 		F3ED2FEC1F87886F00A247B6 /* student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3ED2FEA1F87886F00A247B6 /* student.xcdatamodeld */; };
 		F3ED2FEE1F87886F00A247B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3ED2FED1F87886F00A247B6 /* Assets.xcassets */; };
-		F3ED2FF11F87886F00A247B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3ED2FEF1F87886F00A247B6 /* LaunchScreen.storyboard */; };
+		F3ED2FF11F87886F00A247B6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3ED2FEF1F87886F00A247B6 /* Launch Screen.storyboard */; };
 		F3ED2FFC1F87886F00A247B6 /* studentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED2FFB1F87886F00A247B6 /* studentTests.swift */; };
 		F3ED30071F87886F00A247B6 /* studentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED30061F87886F00A247B6 /* studentUITests.swift */; };
 		F3ED30151F8788B000A247B6 /* StudentSignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED30141F8788B000A247B6 /* StudentSignUpViewModel.swift */; };
@@ -43,15 +48,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5560A3861F898F5E00AA0B78 /* StudentSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSignUpViewController.swift; sourceTree = "<group>"; };
+		5560A3871F898F5E00AA0B78 /* StudentSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentSignUpViewController.xib; sourceTree = "<group>"; };
+		5560A38B1F898FAA00AA0B78 /* StudentSignUpCoordinatror.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSignUpCoordinatror.swift; sourceTree = "<group>"; };
+		5582BDE61F89314A00E2D994 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		5582BDE81F89350B00E2D994 /* StartScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenCoordinator.swift; sourceTree = "<group>"; };
+		5582BDEA1F897ABF00E2D994 /* StartScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartScreenViewController.xib; sourceTree = "<group>"; };
 		55C1F1481F8930050064CB36 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		55C1F1491F8930050064CB36 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		F3ED2FE01F87886F00A247B6 /* student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = student.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3ED2FE31F87886F00A247B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3ED2FE51F87886F00A247B6 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
-		F3ED2FE81F87886F00A247B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3ED2FEB1F87886F00A247B6 /* student.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = student.xcdatamodel; sourceTree = "<group>"; };
 		F3ED2FED1F87886F00A247B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F3ED2FF01F87886F00A247B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3ED2FF01F87886F00A247B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F3ED2FF21F87886F00A247B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3ED2FF71F87886F00A247B6 /* studentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = studentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3ED2FFB1F87886F00A247B6 /* studentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studentTests.swift; sourceTree = "<group>"; };
@@ -89,6 +99,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5560A38A1F898F6700AA0B78 /* StudentSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				F3ED30141F8788B000A247B6 /* StudentSignUpViewModel.swift */,
+				5560A3861F898F5E00AA0B78 /* StudentSignUpViewController.swift */,
+				5560A3871F898F5E00AA0B78 /* StudentSignUpViewController.xib */,
+				5560A38B1F898FAA00AA0B78 /* StudentSignUpCoordinatror.swift */,
+			);
+			path = StudentSignUp;
+			sourceTree = "<group>";
+		};
+		5582BDEC1F897C7300E2D994 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F3ED2FE51F87886F00A247B6 /* StartScreenViewController.swift */,
+				5582BDEA1F897ABF00E2D994 /* StartScreenViewController.xib */,
+				5582BDE81F89350B00E2D994 /* StartScreenCoordinator.swift */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
 		55C1F14C1F8930440064CB36 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,13 +154,13 @@
 			children = (
 				55C1F14C1F8930440064CB36 /* Coordinator */,
 				F3ED2FE31F87886F00A247B6 /* AppDelegate.swift */,
-				F3ED2FE51F87886F00A247B6 /* StartScreenViewController.swift */,
-				F3ED30141F8788B000A247B6 /* StudentSignUpViewModel.swift */,
+				5582BDE61F89314A00E2D994 /* AppCoordinator.swift */,
+				5582BDEC1F897C7300E2D994 /* StartScreen */,
+				5560A38A1F898F6700AA0B78 /* StudentSignUp */,
 				F3ED30171F87942400A247B6 /* Student.swift */,
 				F3ED301A1F87B32F00A247B6 /* Gender.swift */,
-				F3ED2FE71F87886F00A247B6 /* Main.storyboard */,
 				F3ED2FED1F87886F00A247B6 /* Assets.xcassets */,
-				F3ED2FEF1F87886F00A247B6 /* LaunchScreen.storyboard */,
+				F3ED2FEF1F87886F00A247B6 /* Launch Screen.storyboard */,
 				F3ED2FF21F87886F00A247B6 /* Info.plist */,
 				F3ED2FEA1F87886F00A247B6 /* student.xcdatamodeld */,
 			);
@@ -263,9 +294,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3ED2FF11F87886F00A247B6 /* LaunchScreen.storyboard in Resources */,
+				5560A3891F898F5E00AA0B78 /* StudentSignUpViewController.xib in Resources */,
+				F3ED2FF11F87886F00A247B6 /* Launch Screen.storyboard in Resources */,
 				F3ED2FEE1F87886F00A247B6 /* Assets.xcassets in Resources */,
-				F3ED2FE91F87886F00A247B6 /* Main.storyboard in Resources */,
+				5582BDEB1F897ABF00E2D994 /* StartScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,13 +323,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3ED301B1F87B32F00A247B6 /* Gender.swift in Sources */,
+				5560A38C1F898FAA00AA0B78 /* StudentSignUpCoordinatror.swift in Sources */,
 				F3ED30151F8788B000A247B6 /* StudentSignUpViewModel.swift in Sources */,
+				5560A3881F898F5E00AA0B78 /* StudentSignUpViewController.swift in Sources */,
 				F3ED2FE61F87886F00A247B6 /* StartScreenViewController.swift in Sources */,
 				55C1F14B1F8930050064CB36 /* CoordinatorDelegate.swift in Sources */,
 				F3ED2FE41F87886F00A247B6 /* AppDelegate.swift in Sources */,
 				F3ED30181F87942400A247B6 /* Student.swift in Sources */,
+				5582BDE71F89314A00E2D994 /* AppCoordinator.swift in Sources */,
 				F3ED2FEC1F87886F00A247B6 /* student.xcdatamodeld in Sources */,
 				55C1F14A1F8930050064CB36 /* Coordinator.swift in Sources */,
+				5582BDE91F89350B00E2D994 /* StartScreenCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,20 +372,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F3ED2FE71F87886F00A247B6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F3ED2FE81F87886F00A247B6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F3ED2FEF1F87886F00A247B6 /* LaunchScreen.storyboard */ = {
+		F3ED2FEF1F87886F00A247B6 /* Launch Screen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F3ED2FF01F87886F00A247B6 /* Base */,
 			);
-			name = LaunchScreen.storyboard;
+			name = "Launch Screen.storyboard";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
