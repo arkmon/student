@@ -23,7 +23,6 @@ class studentTests: XCTestCase {
     
     func testExample() {
         //Given
-        let sut = StudentSignUpViewModel()
         let student = Student(id: "01", firstName: "Arki", lastName: "Dowejki", gender: Gender.male, email: "ark@gmail.com")
         //When
 
