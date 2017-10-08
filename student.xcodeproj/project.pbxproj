@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		5560A3881F898F5E00AA0B78 /* StudentSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560A3861F898F5E00AA0B78 /* StudentSignUpViewController.swift */; };
 		5560A3891F898F5E00AA0B78 /* StudentSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5560A3871F898F5E00AA0B78 /* StudentSignUpViewController.xib */; };
-		5560A38C1F898FAA00AA0B78 /* StudentSignUpCoordinatror.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560A38B1F898FAA00AA0B78 /* StudentSignUpCoordinatror.swift */; };
+		5560A38C1F898FAA00AA0B78 /* StudentSignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560A38B1F898FAA00AA0B78 /* StudentSignUpCoordinator.swift */; };
+		5560A38E1F8A8A9D00AA0B78 /* StartScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560A38D1F8A8A9D00AA0B78 /* StartScreenViewModel.swift */; };
+		5560A3901F8A8E3B00AA0B78 /* StudentSignUpCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560A38F1F8A8E3B00AA0B78 /* StudentSignUpCoordinatorDelegate.swift */; };
 		5582BDE71F89314A00E2D994 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582BDE61F89314A00E2D994 /* AppCoordinator.swift */; };
 		5582BDE91F89350B00E2D994 /* StartScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582BDE81F89350B00E2D994 /* StartScreenCoordinator.swift */; };
 		5582BDEB1F897ABF00E2D994 /* StartScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5582BDEA1F897ABF00E2D994 /* StartScreenViewController.xib */; };
@@ -50,7 +52,9 @@
 /* Begin PBXFileReference section */
 		5560A3861F898F5E00AA0B78 /* StudentSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSignUpViewController.swift; sourceTree = "<group>"; };
 		5560A3871F898F5E00AA0B78 /* StudentSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentSignUpViewController.xib; sourceTree = "<group>"; };
-		5560A38B1F898FAA00AA0B78 /* StudentSignUpCoordinatror.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSignUpCoordinatror.swift; sourceTree = "<group>"; };
+		5560A38B1F898FAA00AA0B78 /* StudentSignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSignUpCoordinator.swift; sourceTree = "<group>"; };
+		5560A38D1F8A8A9D00AA0B78 /* StartScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewModel.swift; sourceTree = "<group>"; };
+		5560A38F1F8A8E3B00AA0B78 /* StudentSignUpCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSignUpCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		5582BDE61F89314A00E2D994 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		5582BDE81F89350B00E2D994 /* StartScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenCoordinator.swift; sourceTree = "<group>"; };
 		5582BDEA1F897ABF00E2D994 /* StartScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartScreenViewController.xib; sourceTree = "<group>"; };
@@ -105,7 +109,8 @@
 				F3ED30141F8788B000A247B6 /* StudentSignUpViewModel.swift */,
 				5560A3861F898F5E00AA0B78 /* StudentSignUpViewController.swift */,
 				5560A3871F898F5E00AA0B78 /* StudentSignUpViewController.xib */,
-				5560A38B1F898FAA00AA0B78 /* StudentSignUpCoordinatror.swift */,
+				5560A38B1F898FAA00AA0B78 /* StudentSignUpCoordinator.swift */,
+				5560A38F1F8A8E3B00AA0B78 /* StudentSignUpCoordinatorDelegate.swift */,
 			);
 			path = StudentSignUp;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				F3ED2FE51F87886F00A247B6 /* StartScreenViewController.swift */,
+				5560A38D1F8A8A9D00AA0B78 /* StartScreenViewModel.swift */,
 				5582BDEA1F897ABF00E2D994 /* StartScreenViewController.xib */,
 				5582BDE81F89350B00E2D994 /* StartScreenCoordinator.swift */,
 			);
@@ -322,8 +328,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5560A38E1F8A8A9D00AA0B78 /* StartScreenViewModel.swift in Sources */,
 				F3ED301B1F87B32F00A247B6 /* Gender.swift in Sources */,
-				5560A38C1F898FAA00AA0B78 /* StudentSignUpCoordinatror.swift in Sources */,
+				5560A38C1F898FAA00AA0B78 /* StudentSignUpCoordinator.swift in Sources */,
+				5560A3901F8A8E3B00AA0B78 /* StudentSignUpCoordinatorDelegate.swift in Sources */,
 				F3ED30151F8788B000A247B6 /* StudentSignUpViewModel.swift in Sources */,
 				5560A3881F898F5E00AA0B78 /* StudentSignUpViewController.swift in Sources */,
 				F3ED2FE61F87886F00A247B6 /* StartScreenViewController.swift in Sources */,

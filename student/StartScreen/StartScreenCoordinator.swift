@@ -12,6 +12,7 @@ final class StartScreenCoordinator: Coordinator {
     
     weak var delegate: CoordinatorDelegate?
     var root: StartScreenViewController?
+    var studentSignUpCoordinator: StudentSignUpCoordinator?
     
     required init(with delegate: CoordinatorDelegate?) {
         self.delegate = delegate
@@ -19,9 +20,23 @@ final class StartScreenCoordinator: Coordinator {
     
     func start() {
         root = StartScreenViewController()
+        root?.viewModel.coordinatorDelegate = self
         if let root = root {
             delegate?.present(root)
         }
+    }
+}
+
+extension StartScreenCoordinator: CoordinatorDelegate {
+    func present(_ viewController: UIViewController) {
+        delegate?.present(viewController)
+    }
+}
+
+extension StartScreenCoordinator: StudentSignUpCoordinatorDelegate {
+    func showStudentSignUp() {
+        studentSignUpCoordinator = StudentSignUpCoordinator(with: self)
+        studentSignUpCoordinator?.start()
     }
 }
 

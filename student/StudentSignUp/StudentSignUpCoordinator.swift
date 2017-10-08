@@ -1,5 +1,5 @@
 //
-//  StudentSignUpCoordinatror.swift
+//  StudentSignUpCoordinator.swift
 //  student
 //
 //  Created by Arkadiusz Dowejko on 07/10/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StudentSignUpCoordinatror: Coordinator {
+class StudentSignUpCoordinator: Coordinator {
     
     weak var delegate: CoordinatorDelegate?
     var root: StudentSignUpViewController?
@@ -24,4 +24,12 @@ class StudentSignUpCoordinatror: Coordinator {
             delegate?.present(root)
         }
     }
+}
+
+extension StudentSignUpCoordinator: CoordinatorDelegate {
+    
+    func present(_ viewController: UIViewController) {
+        delegate?.present(viewController)
+    }
+    
 }

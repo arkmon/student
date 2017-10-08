@@ -9,6 +9,8 @@
 import UIKit
 
 class StartScreenViewController: UIViewController {
+    
+    var viewModel = StartScreenViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,7 @@ class StartScreenViewController: UIViewController {
     }
 
     @IBAction func createNewStudent() {
-        
+        viewModel.showStudentSignUp()
     }
     
     @IBAction func uploadStoredData() {
