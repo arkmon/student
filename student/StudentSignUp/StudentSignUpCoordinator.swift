@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StudentSignUpCoordinator: Coordinator {
+final class StudentSignUpCoordinator: Coordinator {
     
     weak var delegate: CoordinatorDelegate?
     var root: StudentSignUpViewController?
@@ -27,9 +27,7 @@ class StudentSignUpCoordinator: Coordinator {
 }
 
 extension StudentSignUpCoordinator: CoordinatorDelegate {
-    
     func present(_ viewController: UIViewController) {
         delegate?.present(viewController)
     }
-    
 }

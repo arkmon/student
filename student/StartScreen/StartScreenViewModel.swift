@@ -10,7 +10,6 @@ import UIKit
 
 final class StartScreenViewModel {
     weak var coordinatorDelegate: StudentSignUpCoordinatorDelegate?
-
 }
 
 extension StartScreenViewModel {

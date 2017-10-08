@@ -8,10 +8,10 @@
 
 import UIKit
 
-class AppCoordinator: Coordinator, CoordinatorDelegate {
+final class AppCoordinator: Coordinator {
 
     weak var delegate: CoordinatorDelegate?
-    var root: UIViewController?
+    var root: UINavigationController?
     var startScreenViewCoordinator: StartScreenCoordinator?
     
     required init(with delegate: CoordinatorDelegate?) {
@@ -19,16 +19,18 @@ class AppCoordinator: Coordinator, CoordinatorDelegate {
     }
     
     func start() {
+        root = UINavigationController()
+        if let root = root {
+            delegate?.present(root)
+        }
+        
         startScreenViewCoordinator = StartScreenCoordinator(with: self)
         startScreenViewCoordinator?.start()
     }
-    
-    func present(_ viewController: UIViewController) {
-        delegate?.present(viewController)
-    }
-    
-    func dismiss(_ viewController: UIViewController) {
-        delegate?.dismiss(viewController)
-    }
 }
 
+extension AppCoordinator: CoordinatorDelegate {
+    func present(_ viewController: UIViewController) {
+        root?.pushViewController(viewController, animated: true)
+    }
+}
