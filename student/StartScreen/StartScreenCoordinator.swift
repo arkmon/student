@@ -39,4 +39,3 @@ extension StartScreenCoordinator: StudentSignUpCoordinatorDelegate {
         studentSignUpCoordinator?.start()
     }
 }
-

@@ -23,7 +23,7 @@ class studentTests: XCTestCase {
     
     func testExample() {
         //Given
-        let student = Student(id: "01", firstName: "Arki", lastName: "Dowejki", gender: Gender.male, email: "ark@gmail.com")
+        let student = Student(studentId: "01", firstName: "Arki", lastName: "Dowejki", gender: Gender.male, email: "ark@gmail.com")
         //When
 
         //Then

@@ -103,4 +103,3 @@ extension AppDelegate: CoordinatorDelegate {
         window?.rootViewController = viewController
     }
 }
-

@@ -10,6 +10,10 @@ import Foundation
 
 final class StudentSignUpViewModel {
 
+    let genderArray: Array {
+        return [Gender.male.rawValue, Gender.female.rawValue]
+}
+
     func saveStudent(student: Student) {
 
     }
