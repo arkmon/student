@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StudentSignUpViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class StudentSignUpViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -16,15 +16,20 @@ class StudentSignUpViewController: UIViewController, UIPickerViewDataSource, UIP
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var universityTextField: UITextField!
 
-
+    let genderPickerView = UIPickerView()
     var viewModel = StudentSignUpViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var pickerView = UIPickerView()
-        pickerView.delegate = self
-        genderTextField.inputView = pickerView
+        genderTextField.delegate = self
+        genderPickerView.delegate = self
+        genderTextField.inputView = genderPickerView
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -32,7 +37,11 @@ class StudentSignUpViewController: UIViewController, UIPickerViewDataSource, UIP
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func saveStudent() {
+        
+    }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -47,5 +56,17 @@ class StudentSignUpViewController: UIViewController, UIPickerViewDataSource, UIP
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         genderTextField.text = viewModel.genderArray[row]
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        genderTextField.text = viewModel.genderArray[0]
+        return true
+    }
+    
+    func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y -= 50
+    }
+    func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y += 50
     }
 }

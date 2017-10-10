@@ -94,6 +94,9 @@
                         <constraint firstAttribute="height" constant="50" id="nCj-nf-xap"/>
                     </constraints>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="saveStudent" destination="-1" eventType="touchUpInside" id="jrG-ls-BaK"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
