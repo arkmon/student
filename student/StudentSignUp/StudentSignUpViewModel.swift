@@ -10,12 +10,18 @@ import Foundation
 
 final class StudentSignUpViewModel {
 
-    var genderArray: Array<String> {
+    var genderArray: [String] {
         return [Gender.male.rawValue, Gender.female.rawValue]
     }
     
     func createStudent(firstName: String, lastName: String, gender: String, email: String, university: String) {
-        var student = Student(studentId: "1", firstName: firstName, lastName: lastName, gender: Gender.female, email: email)
+        var student = Student(studentId: "1",
+                              firstName: firstName,
+                              lastName: lastName,
+                              gender: gender,
+                              email: email,
+                              university: university)
+        
         
     }
 
