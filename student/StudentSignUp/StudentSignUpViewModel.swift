@@ -14,12 +14,16 @@ final class StudentSignUpViewModel {
         return [Gender.male.rawValue, Gender.female.rawValue]
     }
     
-    func createStudent(with firstName: String, lastName: String, gender: String, email: String, university: String) {
+    func createStudent(firstName: String, lastName: String, gender: String, email: String, university: String) {
         var student = Student(studentId: "1", firstName: firstName, lastName: lastName, gender: Gender.female, email: email)
         
     }
 
     func saveStudent(student: Student) {
 
+    }
+
+    var numberOfItemsInGenderArray: Int {
+        return genderArray.count 
     }
 }
