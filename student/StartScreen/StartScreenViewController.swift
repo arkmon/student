@@ -32,6 +32,6 @@ class StartScreenViewController: UIViewController {
     }
     
     @IBAction func uploadStoredData() {
-        
+        viewModel.uploadStudents()
     }
 }

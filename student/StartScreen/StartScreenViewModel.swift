@@ -10,6 +10,20 @@ import UIKit
 
 final class StartScreenViewModel {
     weak var coordinatorDelegate: StudentSignUpCoordinatorDelegate?
+    var students = [Student]()
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("students")
+    
+    private func loadStudents() -> [Student]?  {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: StartScreenViewModel.ArchiveURL.path) as? [Student]
+    }
+    
+    func uploadStudents() {
+        
+        if let savedStudents = loadStudents() {
+            students += savedStudents
+        }
+    }
 }
 
 extension StartScreenViewModel {

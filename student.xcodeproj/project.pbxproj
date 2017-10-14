@@ -19,7 +19,6 @@
 		55C1F14B1F8930050064CB36 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1F1491F8930050064CB36 /* CoordinatorDelegate.swift */; };
 		F3ED2FE41F87886F00A247B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED2FE31F87886F00A247B6 /* AppDelegate.swift */; };
 		F3ED2FE61F87886F00A247B6 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED2FE51F87886F00A247B6 /* StartScreenViewController.swift */; };
-		F3ED2FEC1F87886F00A247B6 /* student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3ED2FEA1F87886F00A247B6 /* student.xcdatamodeld */; };
 		F3ED2FEE1F87886F00A247B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3ED2FED1F87886F00A247B6 /* Assets.xcassets */; };
 		F3ED2FF11F87886F00A247B6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3ED2FEF1F87886F00A247B6 /* Launch Screen.storyboard */; };
 		F3ED2FFC1F87886F00A247B6 /* studentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED2FFB1F87886F00A247B6 /* studentTests.swift */; };
@@ -339,7 +338,6 @@
 				F3ED2FE41F87886F00A247B6 /* AppDelegate.swift in Sources */,
 				F3ED30181F87942400A247B6 /* Student.swift in Sources */,
 				5582BDE71F89314A00E2D994 /* AppCoordinator.swift in Sources */,
-				F3ED2FEC1F87886F00A247B6 /* student.xcdatamodeld in Sources */,
 				55C1F14A1F8930050064CB36 /* Coordinator.swift in Sources */,
 				5582BDE91F89350B00E2D994 /* StartScreenCoordinator.swift in Sources */,
 			);
