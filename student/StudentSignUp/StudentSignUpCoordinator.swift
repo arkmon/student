@@ -19,6 +19,7 @@ final class StudentSignUpCoordinator: Coordinator {
     
     func start() {
         root = StudentSignUpViewController()
+        root?.viewModel?.coordinatorDelegate = self
         root?.viewModel = StudentSignUpViewModel()
         if let root = root {
             delegate?.present(root)
@@ -29,5 +30,10 @@ final class StudentSignUpCoordinator: Coordinator {
 extension StudentSignUpCoordinator: CoordinatorDelegate {
     func present(_ viewController: UIViewController) {
         delegate?.present(viewController)
+    }
+    
+    func dismiss(_ viewController: UIViewController) {
+        
+        delegate?.dismiss(viewController)
     }
 }

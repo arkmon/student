@@ -15,18 +15,19 @@
 		5582BDE71F89314A00E2D994 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582BDE61F89314A00E2D994 /* AppCoordinator.swift */; };
 		5582BDE91F89350B00E2D994 /* StartScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582BDE81F89350B00E2D994 /* StartScreenCoordinator.swift */; };
 		5582BDEB1F897ABF00E2D994 /* StartScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5582BDEA1F897ABF00E2D994 /* StartScreenViewController.xib */; };
+		559A4E6C1F9261E1006B6C81 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559A4E6B1F9261E0006B6C81 /* CoreDataStack.swift */; };
+		559A4E6E1F926F5A006B6C81 /* StartScreenCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559A4E6D1F926F5A006B6C81 /* StartScreenCoordinatorDelegate.swift */; };
 		55C1F14A1F8930050064CB36 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1F1481F8930050064CB36 /* Coordinator.swift */; };
 		55C1F14B1F8930050064CB36 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1F1491F8930050064CB36 /* CoordinatorDelegate.swift */; };
 		F3ED2FE41F87886F00A247B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED2FE31F87886F00A247B6 /* AppDelegate.swift */; };
 		F3ED2FE61F87886F00A247B6 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED2FE51F87886F00A247B6 /* StartScreenViewController.swift */; };
+		F3ED2FEC1F87886F00A247B6 /* student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3ED2FEA1F87886F00A247B6 /* student.xcdatamodeld */; };
 		F3ED2FEE1F87886F00A247B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3ED2FED1F87886F00A247B6 /* Assets.xcassets */; };
 		F3ED2FF11F87886F00A247B6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3ED2FEF1F87886F00A247B6 /* Launch Screen.storyboard */; };
 		F3ED2FFC1F87886F00A247B6 /* studentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED2FFB1F87886F00A247B6 /* studentTests.swift */; };
 		F3ED30071F87886F00A247B6 /* studentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED30061F87886F00A247B6 /* studentUITests.swift */; };
 		F3ED30151F8788B000A247B6 /* StudentSignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED30141F8788B000A247B6 /* StudentSignUpViewModel.swift */; };
 		F3ED30161F8788B000A247B6 /* StudentSignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED30141F8788B000A247B6 /* StudentSignUpViewModel.swift */; };
-		F3ED30181F87942400A247B6 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED30171F87942400A247B6 /* Student.swift */; };
-		F3ED30191F87942400A247B6 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED30171F87942400A247B6 /* Student.swift */; };
 		F3ED301B1F87B32F00A247B6 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED301A1F87B32F00A247B6 /* Gender.swift */; };
 		F3ED301C1F87B32F00A247B6 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED301A1F87B32F00A247B6 /* Gender.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,8 @@
 		5582BDE61F89314A00E2D994 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		5582BDE81F89350B00E2D994 /* StartScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenCoordinator.swift; sourceTree = "<group>"; };
 		5582BDEA1F897ABF00E2D994 /* StartScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartScreenViewController.xib; sourceTree = "<group>"; };
+		559A4E6B1F9261E0006B6C81 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		559A4E6D1F926F5A006B6C81 /* StartScreenCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		55C1F1481F8930050064CB36 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		55C1F1491F8930050064CB36 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		F3ED2FE01F87886F00A247B6 /* student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = student.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +124,7 @@
 				5560A38D1F8A8A9D00AA0B78 /* StartScreenViewModel.swift */,
 				5582BDEA1F897ABF00E2D994 /* StartScreenViewController.xib */,
 				5582BDE81F89350B00E2D994 /* StartScreenCoordinator.swift */,
+				559A4E6D1F926F5A006B6C81 /* StartScreenCoordinatorDelegate.swift */,
 			);
 			path = StartScreen;
 			sourceTree = "<group>";
@@ -168,6 +172,7 @@
 				F3ED2FEF1F87886F00A247B6 /* Launch Screen.storyboard */,
 				F3ED2FF21F87886F00A247B6 /* Info.plist */,
 				F3ED2FEA1F87886F00A247B6 /* student.xcdatamodeld */,
+				559A4E6B1F9261E0006B6C81 /* CoreDataStack.swift */,
 			);
 			path = student;
 			sourceTree = "<group>";
@@ -329,15 +334,17 @@
 			files = (
 				5560A38E1F8A8A9D00AA0B78 /* StartScreenViewModel.swift in Sources */,
 				F3ED301B1F87B32F00A247B6 /* Gender.swift in Sources */,
+				559A4E6E1F926F5A006B6C81 /* StartScreenCoordinatorDelegate.swift in Sources */,
 				5560A38C1F898FAA00AA0B78 /* StudentSignUpCoordinator.swift in Sources */,
 				5560A3901F8A8E3B00AA0B78 /* StudentSignUpCoordinatorDelegate.swift in Sources */,
 				F3ED30151F8788B000A247B6 /* StudentSignUpViewModel.swift in Sources */,
 				5560A3881F898F5E00AA0B78 /* StudentSignUpViewController.swift in Sources */,
 				F3ED2FE61F87886F00A247B6 /* StartScreenViewController.swift in Sources */,
+				559A4E6C1F9261E1006B6C81 /* CoreDataStack.swift in Sources */,
 				55C1F14B1F8930050064CB36 /* CoordinatorDelegate.swift in Sources */,
 				F3ED2FE41F87886F00A247B6 /* AppDelegate.swift in Sources */,
-				F3ED30181F87942400A247B6 /* Student.swift in Sources */,
 				5582BDE71F89314A00E2D994 /* AppCoordinator.swift in Sources */,
+				F3ED2FEC1F87886F00A247B6 /* student.xcdatamodeld in Sources */,
 				55C1F14A1F8930050064CB36 /* Coordinator.swift in Sources */,
 				5582BDE91F89350B00E2D994 /* StartScreenCoordinator.swift in Sources */,
 			);
@@ -349,7 +356,6 @@
 			files = (
 				F3ED301C1F87B32F00A247B6 /* Gender.swift in Sources */,
 				F3ED30161F8788B000A247B6 /* StudentSignUpViewModel.swift in Sources */,
-				F3ED30191F87942400A247B6 /* Student.swift in Sources */,
 				F3ED2FFC1F87886F00A247B6 /* studentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,21 +7,31 @@
 //
 
 import UIKit
+import CoreData
 
 final class StartScreenViewModel {
-    weak var coordinatorDelegate: StudentSignUpCoordinatorDelegate?
-    var students = [Student]()
-    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("students")
     
-    private func loadStudents() -> [Student]?  {
-        return NSKeyedUnarchiver.unarchiveObject(withFile: StartScreenViewModel.ArchiveURL.path) as? [Student]
+    var coreDataStack = CoreDataStack()
+    var expenses: [Student?] = []
+    weak var coordinatorDelegate: StudentSignUpCoordinatorDelegate?
+    
+    func getData() {
+        let context = coreDataStack.persistentContainer.viewContext
+        
+        do {
+            expenses = try context.fetch(Student.fetchRequest())
+            makeTheList()
+        }
+            
+        catch {
+            print("Fetching Failed")
+        }
     }
     
-    func uploadStudents() {
-        
-        if let savedStudents = loadStudents() {
-            students += savedStudents
+    
+    func makeTheList() {
+        for expense: Student? in expenses {
+            print(expense?.email as Any)
         }
     }
 }

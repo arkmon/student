@@ -51,6 +51,7 @@ class StudentSignUpViewController: UIViewController {
                                      email: email,
                                      university: university)
 
+            
         } else {
             let alert = UIAlertController(title: "Error",
                                           message: "Please make sure to populate all fields",

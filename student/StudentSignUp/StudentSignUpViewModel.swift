@@ -7,59 +7,38 @@
 //
 
 import Foundation
-import os.log
+import CoreData
+import UIKit
 
 final class StudentSignUpViewModel {
-    var students = [Student]()
-    
-    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("students")
+
+    var students: [Student?] = []
+    var coreDataStack = CoreDataStack()
+    weak var coordinatorDelegate: CoordinatorDelegate?
     
     var genderArray: [String] {
         return [Gender.male.rawValue, Gender.female.rawValue]
     }
     
     func createStudent(firstName: String, lastName: String, gender: String, email: String, university: String) {
-        let student = Student(studentId: "1",
-                              firstName: firstName,
-                              lastName: lastName,
-                              gender: gender,
-                              email: email,
-                              university: university)
         
-        students += [student]
-        
-        
-        
-    saveStudents()
-    }
-    
-    private func saveStudents() {
-        let encodedData = try? JSONEncoder().encode(students)
-        
-        //Create JSON
-        var json: Any?
-        if let data = encodedData {
-            json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
-        }
-        
-        //Print JSON Object
-        if let json = json {
-            print("Person JSON:\n" + String(describing: json) + "\n")
-        }
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(encodedData, toFile: StudentSignUpViewModel.ArchiveURL.path)
-        if isSuccessfulSave {
-            os_log("Meals successfully saved.", log: OSLog.default, type: .debug)
-        } else {
-            os_log("Failed to save meals...", log: OSLog.default, type: .error)
-        }
-    }
-    
-    func saveStudent(student: Student) {
+        let context = coreDataStack.persistentContainer.viewContext
+        let student = Student(context: context)
+        student.firstName = firstName
+        student.lastName = lastName
+        student.gender = gender
+        student.email = email
+        student.university = university
+        coreDataStack.saveContext()
         
     }
-    
+
     var numberOfItemsInGenderArray: Int {
         return genderArray.count 
+    }
+    
+    func dismiss(_ viewController: UIViewController) {
+        
+        coordinatorDelegate?.dismiss(viewController)
     }
 }
