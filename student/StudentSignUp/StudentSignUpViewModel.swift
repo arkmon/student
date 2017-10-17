@@ -6,14 +6,14 @@
 //  Copyright © 2017 arkmon. All rights reserved.
 //
 
-import Foundation
 import CoreData
 import UIKit
 
 final class StudentSignUpViewModel {
 
-    var students: [Student?] = []
     var coreDataStack = CoreDataStack()
+    var students: [Student?] = []
+
     weak var coordinatorDelegate: CoordinatorDelegate?
     
     var genderArray: [String] {

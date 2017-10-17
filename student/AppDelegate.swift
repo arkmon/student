@@ -102,4 +102,10 @@ extension AppDelegate: CoordinatorDelegate {
     func present(_ viewController: UIViewController) {
         window?.rootViewController = viewController
     }
+
+    func dismiss(_ viewController: UIViewController) {
+        if window?.rootViewController == viewController {
+            window?.rootViewController = nil
+        }
+    }
 }

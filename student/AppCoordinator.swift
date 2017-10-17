@@ -33,4 +33,10 @@ extension AppCoordinator: CoordinatorDelegate {
     func present(_ viewController: UIViewController) {
         root?.pushViewController(viewController, animated: true)
     }
+
+    func dismiss(_ viewController: UIViewController) {
+        if let viewControllerIndex = self.root?.viewControllers.index(of: viewController) {
+            self.root?.viewControllers.remove(at: viewControllerIndex)
+        }
+    }
 }

@@ -7,15 +7,21 @@
 //
 
 import XCTest
+import CoreData
 @testable import student
 
 class studentTests: XCTestCase {
-    
+
+    var sut: StudentSignUpViewModel!
+
     override func setUp() {
         super.setUp()
+        let coreDataStack = CoreDataStack()
 
+        let entity = NSEntityDescription.insertNewObject(forEntityName: "student", into: coreDataStack.setUpInMemoryManagedObjectContext())
+        sut = StudentSignUpViewModel()
     }
-    
+
     override func tearDown() {
 
         super.tearDown()
@@ -23,11 +29,12 @@ class studentTests: XCTestCase {
     
     func testExample() {
         //Given
-        let student = Student(studentId: "01", firstName: "Arki", lastName: "Dowejki", gender: Gender.male, email: "ark@gmail.com")
+
         //When
 
+        sut.createStudent(firstName: "Arki", lastName: "Dowejki", gender: Gender.male.rawValue, email: "ark@gmail.com", university: "Westminster")
         //Then
-        XCTAssertNotNil(student)
+        //XCTAssertNotNil(student)
 
 
     }

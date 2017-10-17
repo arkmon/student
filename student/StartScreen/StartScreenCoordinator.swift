@@ -31,9 +31,13 @@ extension StartScreenCoordinator: CoordinatorDelegate {
     func present(_ viewController: UIViewController) {
         delegate?.present(viewController)
     }
+
+    func dismiss(_ viewController: UIViewController) {
+        delegate?.dismiss(viewController)
+    }
 }
 
-extension StartScreenCoordinator: StudentSignUpCoordinatorDelegate {
+extension StartScreenCoordinator: StartScreenCoordinatorDelegate {
     func showStudentSignUp() {
         studentSignUpCoordinator = StudentSignUpCoordinator(with: self)
         studentSignUpCoordinator?.start()

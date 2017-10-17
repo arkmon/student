@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol StartScreenCoordinatorDelegate: class {
-    func dismiss()
+     func showStudentSignUp()
 }

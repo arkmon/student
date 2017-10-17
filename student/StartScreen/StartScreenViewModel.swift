@@ -12,14 +12,15 @@ import CoreData
 final class StartScreenViewModel {
     
     var coreDataStack = CoreDataStack()
-    var expenses: [Student?] = []
-    weak var coordinatorDelegate: StudentSignUpCoordinatorDelegate?
+    var students: [Student?] = []
+    
+    weak var coordinatorDelegate: StartScreenCoordinatorDelegate?
     
     func getData() {
         let context = coreDataStack.persistentContainer.viewContext
         
         do {
-            expenses = try context.fetch(Student.fetchRequest())
+            students = try context.fetch(Student.fetchRequest())
             makeTheList()
         }
             
@@ -28,15 +29,13 @@ final class StartScreenViewModel {
         }
     }
     
-    
     func makeTheList() {
-        for expense: Student? in expenses {
-            print(expense?.email as Any)
+        for student: Student? in students {
+            //start encoding
+            print(student?.email as Any)
         }
     }
-}
 
-extension StartScreenViewModel {
     func showStudentSignUp() {
         coordinatorDelegate?.showStudentSignUp()
     }
