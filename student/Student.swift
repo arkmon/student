@@ -17,7 +17,13 @@ public struct Student {
     public let email: String
     public let university: String
     
-    public init(studentId: String, firstName: String, lastName: String, gender: String, email: String, university: String) {
+    public init(studentId: String,
+                firstName: String,
+                lastName: String,
+                gender: String,
+                email: String,
+                university: String)
+    {
         self.studentId = studentId
         self.firstName = firstName
         self.lastName = lastName

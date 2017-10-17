@@ -10,25 +10,23 @@ import UIKit
 import CoreData
 
 final class StartScreenViewModel {
-    
+
     var coreDataStack = CoreDataStack()
     var students: [Student?] = []
-    
+
     weak var coordinatorDelegate: StartScreenCoordinatorDelegate?
-    
+
     func getData() {
         let context = coreDataStack.persistentContainer.viewContext
-        
+
         do {
             students = try context.fetch(Student.fetchRequest())
             makeTheList()
-        }
-            
-        catch {
+        } catch {
             print("Fetching Failed")
         }
     }
-    
+
     func makeTheList() {
         for student: Student? in students {
             //start encoding
