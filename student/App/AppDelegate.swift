@@ -13,11 +13,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var appCoordinator: AppCoordinator?
+    var coreDataStack: CoreDataStack?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setUpDependencyInjection()
         setUpCoordinator()
         return true
+    }
+
+    func applicationWillTerminate(_ application: UIApplication) {
+        coreDataStack = AppDIContainer.resolve(CoreDataStack.self)
+        coreDataStack?.saveContext()
+    }
+
+    func setUpDependencyInjection() {
+        AppDIContainer.registries = [
+            CoreDataDIContainerRegistry.self
+        ]
+
+        AppDIContainer.replaceContainer()
     }
     
     func setUpCoordinator() {

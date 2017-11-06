@@ -10,18 +10,12 @@ import CoreData
 
 class CoreDataStack {
 
-    lazy var persistentContainer: NSPersistentContainer = {
-        
-        let container = NSPersistentContainer(name: "student")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-        return container
-    }()
-    
+    var persistentContainer: NSPersistentContainer
+
+    init(persistentContainer: NSPersistentContainer) {
+        self.persistentContainer = persistentContainer
+    }
+
     // MARK: - Core Data Saving support
     
     func saveContext () {
@@ -30,12 +24,26 @@ class CoreDataStack {
             do {
                 try context.save()
             } catch {
-                
+
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }
+
+
+    func getStudent() -> [Student]? {
+        let context = persistentContainer.viewContext
+        var data: [Student]?
+        do {
+            data = try context.fetch(Student.fetchRequest())
+        } catch {
+            print("Fetching Failed")
+
+        }
+        return data
+    }
+
 
     func setUpInMemoryManagedObjectContext() -> NSManagedObjectContext {
         let managedObjectModel = NSManagedObjectModel.mergedModel(from: [Bundle.main])!
@@ -51,7 +59,7 @@ class CoreDataStack {
 
         let managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
-        
+
         return managedObjectContext
     }
 }

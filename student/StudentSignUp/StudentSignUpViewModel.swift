@@ -11,7 +11,7 @@ import UIKit
 
 final class StudentSignUpViewModel {
 
-    var coreDataStack = CoreDataStack()
+    var coreDataStack: CoreDataStack?
     var students: [Student?] = []
 
     weak var coordinatorDelegate: CoordinatorDelegate?
@@ -21,16 +21,17 @@ final class StudentSignUpViewModel {
     }
     
     func createStudent(firstName: String, lastName: String, gender: String, email: String, university: String) {
-        
-        let context = coreDataStack.persistentContainer.viewContext
-        let student = Student(context: context)
-        student.firstName = firstName
-        student.lastName = lastName
-        student.gender = gender
-        student.email = email
-        student.university = university
-        coreDataStack.saveContext()
-        
+        coreDataStack = AppDIContainer.resolve(CoreDataStack.self)
+
+        if let context = coreDataStack?.persistentContainer.viewContext {
+            let student = Student(context: context)
+            student.firstName = firstName
+            student.lastName = lastName
+            student.gender = gender
+            student.email = email
+            student.university = university
+            coreDataStack?.saveContext()
+        }
     }
 
     var numberOfItemsInGenderArray: Int {
