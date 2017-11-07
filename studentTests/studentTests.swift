@@ -13,12 +13,13 @@ import CoreData
 class studentTests: XCTestCase {
 
     var sut: StudentSignUpViewModel!
+    var coreDataStack: CoreDataStack?
 
     override func setUp() {
         super.setUp()
-        let coreDataStack = CoreDataStack()
+        coreDataStack = AppDIContainer.resolve(CoreDataStack.self)
 
-        let entity = NSEntityDescription.insertNewObject(forEntityName: "student", into: coreDataStack.setUpInMemoryManagedObjectContext())
+        let entity = NSEntityDescription.insertNewObject(forEntityName: "student", into: (coreDataStack?.setUpInMemoryManagedObjectContext())!)
         sut = StudentSignUpViewModel()
     }
 
@@ -26,24 +27,12 @@ class studentTests: XCTestCase {
 
         super.tearDown()
     }
-    
+
     func testExample() {
         //Given
-
         //When
-
-        sut.createStudent(firstName: "Arki", lastName: "Dowejki", gender: Gender.male.rawValue, email: "ark@gmail.com", university: "Westminster")
+        sut.createStudent(firstName: "Arki", lastName: "Dowejko", gender: Gender.male.rawValue, email: "ark@gmail.com", university: "Westminster")
         //Then
         //XCTAssertNotNil(student)
-
-
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
