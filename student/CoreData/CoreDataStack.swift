@@ -17,7 +17,7 @@ class CoreDataStack {
     }
 
     // MARK: - Core Data Saving support
-    
+
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -31,7 +31,6 @@ class CoreDataStack {
         }
     }
 
-
     func getStudent() -> [Student]? {
         let context = persistentContainer.viewContext
         var data: [Student]?
@@ -39,11 +38,9 @@ class CoreDataStack {
             data = try context.fetch(Student.fetchRequest())
         } catch {
             print("Fetching Failed")
-
         }
         return data
     }
-
 
     func setUpInMemoryManagedObjectContext() -> NSManagedObjectContext {
         let managedObjectModel = NSManagedObjectModel.mergedModel(from: [Bundle.main])!

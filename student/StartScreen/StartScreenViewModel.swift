@@ -25,10 +25,10 @@ final class StartScreenViewModel {
     }
 
     func makeTheList() {
-        if let students = students{
-            students.forEach{ student in
+        if let students = students {
+            students.forEach { student in
                 //start encoding
-                //print(student?.email as Any)
+                print(student.email as Any)
             }
         }
 

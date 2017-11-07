@@ -14,7 +14,7 @@ final class CoreDataDIContainerRegistry: DIContainerRegistry {
     class func registerDependencies(in container: Container) {
         container.register(CoreDataStack.self) { _ in
             let container = NSPersistentContainer(name: "student")
-            container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            container.loadPersistentStores(completionHandler: { (_, error) in
                 if let error = error as NSError? {
 
                     fatalError("Unresolved error \(error), \(error.userInfo)")

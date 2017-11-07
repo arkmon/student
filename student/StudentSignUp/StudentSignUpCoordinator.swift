@@ -38,4 +38,3 @@ extension StudentSignUpCoordinator: CoordinatorDelegate {
         delegate?.dismiss(viewController)
     }
 }
-
